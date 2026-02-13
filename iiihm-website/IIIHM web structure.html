@@ -1,0 +1,448 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>International Institute of Hotel Management | Best Hotel Management College in Kolkata</title>
+  <meta name="description" content="IEM's International Institute of Hotel Management (IIIHM) - Premier institute for Hospitality & Hotel Management education in Kolkata. Offering BHMCT & BSc Hospitality programs."/>
+  <style>
+    :root {
+      --primary: #8B0000;       /* Dark red - common in hospitality institutes */
+      --primary-dark: #5e0000;
+      --accent: #FFD700;        /* Gold */
+      --text: #333;
+      --light: #f8f8f8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo h1 {
+      color: var(--primary);
+      font-size: 1.9rem;
+      margin: 0;
+    }
+    .logo span {
+      color: #444;
+      font-size: 1.1rem;
+      font-weight: normal;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 140px 20px 100px;
+    }
+    .hero h2 {
+      font-size: 3.4rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+    h2.section-title {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 50px;
+      color: var(--primary);
+      position: relative;
+    }
+    h2.section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-12px); }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 25px;
+      text-align: center;
+    }
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .about {
+      background: var(--light);
+    }
+
+    .enquiry {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+    }
+    .enquiry form {
+      max-width: 600px;
+      margin: 40px auto;
+      display: grid;
+      gap: 18px;
+    }
+    .enquiry input, .enquiry select, .enquiry textarea {
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .enquiry button {
+      background: var(--accent);
+      color: #222;
+      border: none;
+      padding: 16px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 60px 0 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    footer h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+    footer a:hover { color: var(--accent); }
+    .social a {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 1.6rem;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #333;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2.6rem; }
+      nav ul { flex-direction: column; gap: 15px; }
+      .header-inner { flex-direction: column; gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  
+   <!--   **********  -->
+   
+   
+   <!--   **********  -->
+	  
+	  
+	  
+    <div class="container header-inner">
+      <div class="logo">
+	  <!--  Add this IIIHM logo on the left side "iiihm-website\images\IIIHM LOGO.jpg" -->
+	  <!--  Add this IIIHM logo on the right side "iiihm-website\images\UEM LOGO.jpg" -->
+        <h1>IIIHM</h1>
+        <span>IEM's International Institute of Hotel Management</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#infrastructure">Infrastructure</a></li>
+          <li><a href="#placements">Placements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h2>Welcome to IIIHM Kolkata</h2>
+      <p>Premier Institute for Hospitality & Hotel Management Education<br>Affiliated to University of Engineering & Management (UEM), Kolkata</p>
+      <a href="#enquiry" class="btn">Apply Now</a>
+      <a href="#courses" class="btn btn-outline">Explore Courses</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">Why Choose IIIHM?</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://i.ibb.co/Pv31HsX9/iem-ashram-building-1.png" alt="Industry Experience">
+          <div class="card-content">
+            <h3>36+ Years of Excellence</h3>
+            <p>Part of reputed IEM Group with strong academic legacy.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://api.srimaniyainstitute.in/uploads/images/file-1768035155007-173224671.jpg" alt="Placements">
+          <div class="card-content">
+            <h3>Excellent Placements</h3>
+            <p>Strong industry connections with top hotel chains & cruise lines.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1522156373667-4c7234bbd804?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Labs">
+          <div class="card-content">
+            <h3>World-class Infrastructure</h3>
+            <p>Training kitchens, mock bar, front office, computer labs & more.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="container">
+      <h2 class="section-title">Our Programs</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://tlshs.com/blog/68568cd769233Top%20Hotel%20Management%20Courses%20After%2012th%20in%20India.webp" alt="BHMCT">
+		  <!--  Add this image in place of alt="BHMCT"   "iiihm-website\images\BHMCT.JPG" -->
+          <div class="card-content">
+            <h3>Bachelor of Hotel Management & Catering Technology (BHMCT)</h3>
+            <p>4-year honours degree with focus on hotel operations, catering & management.</p>
+            <a href="#" class="btn" style="margin-top:15px; font-size:0.95rem;">Know More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://tlshs.com/blog/6841986f4a557Bachelor%20of%20Hotel%20Management%20vs%20B.Sc.%20in%20Hospitality%20&%20Hotel%20Administration.webp" alt="BSc Hospitality">
+		  <!--  Add this image in place of alt="BSc Hospitality   "iiihm-website\images\BHHA.JPG" -->
+          
+		  <div class="card-content">
+            <h3>B.Sc. in Hospitality & Hotel Administration (BHHA)</h3>
+            <p>4-year programme with dual major options and strong industry exposure.</p>
+            <a href="#" class="btn" style="margin-top:15px; font-size:0.95rem;">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f0f0f0;" id="placements">
+    <div class="container">
+      <h2 class="section-title">Training & Placements</h2>
+	  
+	  
+	  <!--   **********  -->
+	  <!--   **********  -->
+	   
+    
+    <p style="text-align:center; max-width:900px; margin:0 auto 40px; font-size:1.2rem;">
+      Our students receive excellent training and are placed in top hospitality brands, hotel chains, cruise lines, and airlines.
+    </p>
+
+    <!-- Company Logos Carousel / Grid -->
+    <div class="logo-marquee-wrapper" style="overflow: hidden; margin: 0 auto; max-width: 100%;">
+      <div class="logo-marquee" style="
+        display: flex;
+        animation: scroll 25s linear infinite;
+        white-space: nowrap;
+      ">
+        <!-- Repeat logos for smooth infinite scroll -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoOXnAVfTGWJASt_sWiqVMF1oD9lura9AJsw&s" alt="Taj Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="The Oberoi Group" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Marriott" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="ITC Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Accor" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Hyatt" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Hilton" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Radisson" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <!-- Duplicate set for seamless loop -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Taj_Hotels_logo.svg/512px-Taj_Hotels_logo.svg.png" alt="Taj Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="The Oberoi Group" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Marriott_International_logo.svg/512px-Marriott_International_logo.svg.png" alt="Marriott" style="height: 60px; margin: 0 30px; object-fit: contain;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="ITC Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
+      </div>
+    </div>
+
+    <!-- CSS for marquee animation -->
+    <style>
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .logo-marquee-wrapper:hover .logo-marquee {
+        animation-play-state: paused; /* Pause on hover */
+      }
+      @media (max-width: 768px) {
+        .logo-marquee {
+          animation-duration: 35s; /* Slower on mobile */
+        }
+      }
+    </style>
+
+	 
+	  <!--   **********  -->
+	  <!--   **********  -->
+	
+	  
+          <div style="text-align:center;">
+        <a href="#" class="btn">View Placement Records</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="enquiry" id="enquiry">
+    <div class="container">
+      <h2 class="section-title" style="color:white;">Enquire Now</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Mobile Number" required>
+        <select required>
+          <option value="">Select Course</option>
+          <option>BHMCT</option>
+          <option>BSc Hospitality & Hotel Administration</option>
+        </select>
+        <textarea placeholder="Your Message / Query" rows="4"></textarea>
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>IIIHM Kolkata</h4>
+          <p>IEM's International Institute of Hotel Management<br>
+          Under University of Engineering & Management, Kolkata<br>
+          Salt Lake City, Kolkata, West Bengal<br>
+		  Plot No. J-1/1, Block EP & GP, Sector-V, Salt Lake, Kolkata – 700091</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Courses</a>
+          <a href="#">Admissions</a>
+          <a href="#">Placements</a>
+          <a href="#">Infrastructure</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Phone: +91-9903200520<br>  +91-9990374209<br>
+		  Email: admissions@iiihm.in<br>
+          Website: www.iiihm.in</p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social">
+		  
+		  
+		
+		    <!--   Add Facebook, Instagram, Linkedin logo here  -->
+
+            <a href="https://www.facebook.com/IEMInternationalInstituteofHotelManagement/">FB</a>
+            <a href="https://www.instagram.com/iiihm_uem/">IN</a>
+            <a href="https://www.linkedin.com/company/iem-s-international-institute-of-hotel-management/">LI</a>
+           
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 IEM's International Institute of Hotel Management. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
