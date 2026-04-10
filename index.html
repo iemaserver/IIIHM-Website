@@ -1,83 +1,130 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>International Institute of Hotel Management | Best Hotel Management College in Kolkata</title>
   <meta name="description" content="IEM's International Institute of Hotel Management (IIIHM) - Premier institute for Hospitality & Hotel Management education in Kolkata. Offering BHMCT & BSc Hospitality programs."/>
+
   <style>
     :root {
-      --primary: #8B0000;       /* Dark red - common in hospitality institutes */
+      --primary: #8B0000;
       --primary-dark: #5e0000;
-      --accent: #FFD700;        /* Gold */
+      --accent: #FFD700;
       --text: #333;
       --light: #f8f8f8;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       line-height: 1.6;
     }
+
+    /* ===== HEADER ===== */
     header {
       background: white;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
-      padding: 15px 0;
+      padding: 0px 0;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
+
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
     }
-    .logo h1 {
+
+    /* ===== LOGO AREA ===== */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+	  margin: 0;
+      flex-shrink: 0;
+    }
+
+    .logo-img {
+      height: 65px;
+      width: auto;
+	  margin: 0;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      text-align: left;
+    }
+
+    .logo-text h1 {
       color: var(--primary);
       font-size: 1.9rem;
       margin: 0;
+      line-height: 1.2;
     }
-    .logo span {
+
+    .logo-text span {
       color: #444;
-      font-size: 1.1rem;
-      font-weight: normal;
+      font-size: 0.82rem;
+      font-weight: 500;
+      white-space: nowrap;
     }
+
+    /* ===== NAV ===== */
     nav ul {
       list-style: none;
       display: flex;
-      gap: 28px;
+      gap: 24px;
+      flex-wrap: wrap;
     }
+
     nav a {
       text-decoration: none;
       color: #333;
       font-weight: 600;
+      font-size: 0.95rem;
       transition: color 0.3s;
     }
+
     nav a:hover { color: var(--primary); }
 
+    /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
       padding: 140px 20px 100px;
     }
+
     .hero h2 {
       font-size: 3.4rem;
       margin-bottom: 20px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
+
     .hero p {
       font-size: 1.4rem;
       max-width: 800px;
       margin: 0 auto 30px;
     }
+
+    /* ===== BUTTONS ===== */
     .btn {
       display: inline-block;
       background: var(--primary);
@@ -89,25 +136,28 @@
       margin: 10px;
       transition: all 0.3s;
     }
+
     .btn:hover {
       background: var(--primary-dark);
       transform: translateY(-3px);
     }
+
     .btn-outline {
       background: transparent;
       border: 2px solid white;
     }
 
-    section {
-      padding: 80px 0;
-    }
+    /* ===== SECTIONS ===== */
+    section { padding: 80px 0; }
+
     h2.section-title {
       text-align: center;
       font-size: 2.6rem;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       color: var(--primary);
       position: relative;
     }
+
     h2.section-title::after {
       content: '';
       width: 80px;
@@ -119,11 +169,13 @@
       transform: translateX(-50%);
     }
 
+    /* ===== CARDS ===== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
+
     .card {
       background: white;
       border-radius: 12px;
@@ -131,42 +183,113 @@
       box-shadow: 0 5px 25px rgba(0,0,0,0.08);
       transition: transform 0.3s;
     }
+
     .card:hover { transform: translateY(-12px); }
+
     .card img {
       width: 100%;
       height: 220px;
       object-fit: cover;
     }
+
     .card-content {
       padding: 25px;
       text-align: center;
     }
+
     .card h3 {
       color: var(--primary);
       margin-bottom: 15px;
     }
 
-    .about {
-      background: var(--light);
+    /* ===== ABOUT ===== */
+    .about { background: var(--light); }
+
+    /* ===== INFRASTRUCTURE ===== */
+    .infra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      text-align: center;
     }
 
+    .infra-item {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s;
+    }
+
+    .infra-item:hover { transform: translateY(-8px); }
+
+    .infra-icon {
+      font-size: 2.8rem;
+      margin-bottom: 14px;
+    }
+
+    .infra-item h4 {
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    /* ===== PLACEMENTS MARQUEE ===== */
+    .logo-marquee-wrapper {
+      overflow: hidden;
+      margin: 0 auto 40px;
+      max-width: 100%;
+    }
+
+    .logo-marquee {
+      display: flex;
+      animation: scroll 28s linear infinite;
+      white-space: nowrap;
+      align-items: center;
+    }
+
+    .logo-marquee img {
+      height: 55px;
+      margin: 0 35px;
+      object-fit: contain;
+      filter: grayscale(30%);
+      transition: filter 0.3s;
+    }
+
+    .logo-marquee img:hover { filter: grayscale(0%); }
+
+    .logo-marquee-wrapper:hover .logo-marquee {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== ENQUIRY FORM ===== */
     .enquiry {
       background: var(--primary);
       color: white;
       text-align: center;
     }
+
     .enquiry form {
       max-width: 600px;
       margin: 40px auto;
       display: grid;
       gap: 18px;
     }
-    .enquiry input, .enquiry select, .enquiry textarea {
+
+    .enquiry input,
+    .enquiry select,
+    .enquiry textarea {
       padding: 14px;
       border: none;
       border-radius: 6px;
       font-size: 1rem;
     }
+
     .enquiry button {
       background: var(--accent);
       color: #222;
@@ -176,36 +299,68 @@
       font-weight: bold;
       cursor: pointer;
       border-radius: 6px;
+      transition: opacity 0.3s;
     }
 
+    .enquiry button:hover { opacity: 0.88; }
+
+    /* ===== FOOTER ===== */
     footer {
       background: #111;
       color: #ccc;
       padding: 60px 0 20px;
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 40px;
       margin-bottom: 40px;
     }
+
     footer h4 {
       color: white;
       margin-bottom: 20px;
       font-size: 1.3rem;
     }
+
     footer a {
       color: #aaa;
       text-decoration: none;
       display: block;
       margin-bottom: 10px;
     }
+
     footer a:hover { color: var(--accent); }
-    .social a {
-      display: inline-block;
-      margin-right: 15px;
-      font-size: 1.6rem;
+
+    /* ===== SOCIAL ICONS ===== */
+    .social {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
     }
+
+    .social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #222;
+      color: #ccc;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      margin: 0;
+    }
+
+    .social a:hover { transform: translateY(-3px); }
+    .social a.fb:hover  { background: #1877F2; color: white; }
+    .social a.ig:hover  { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; }
+    .social a.li:hover  { background: #0A66C2; color: white; }
+
+    .social svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* ===== COPYRIGHT ===== */
     .copyright {
       text-align: center;
       padding-top: 30px;
@@ -213,184 +368,243 @@
       font-size: 0.95rem;
     }
 
-    @media (max-width: 768px) {
-      .hero h2 { font-size: 2.6rem; }
-      nav ul { flex-direction: column; gap: 15px; }
-      .header-inner { flex-direction: column; gap: 15px; }
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .header-inner { flex-wrap: wrap; justify-content: center; }
+      nav ul { justify-content: center; gap: 16px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 2rem; }
+      .hero p  { font-size: 1.1rem; }
+      .logo-text span { white-space: normal; text-align: center; }
+      .logo-img { height: 48px; }
+      .logo-marquee { animation-duration: 40s; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-  
-   <!--   **********  -->
-   
-   
-   <!--   **********  -->
-	  
-	  
-	  
-    <div class="container header-inner">
-      <div class="logo">
-	  <!--  Add this IIIHM logo on the left side "images\IIIHM LOGO.jpg" -->
-	  <!--  Add this IIIHM logo on the right side "images\UEM LOGO.jpg" -->
-        <h1>IIIHM</h1>
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container header-inner">
+
+    <!-- Left: IIIHM Logo + Text (Bigger now) -->
+    <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+      <img 
+        src="data:image/png;base64,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" 
+        alt="IIIHM Logo"
+        class="logo-img"
+        style="height: 105px;"   <!-- Increased size -->
+      
+
+      <div class="logo-text">
+        <h1 style="font-size: 2.2rem;">IIIHM</h1>   <!-- Slightly bigger text -->
         <span>IEM's International Institute of Hotel Management</span>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#infrastructure">Infrastructure</a></li>
-          <li><a href="#placements">Placements</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </div>
-  </header>
 
+    <!-- Center Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#infrastructure">Infrastructure</a></li>
+        <li><a href="#placements">Placements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: UEM Logo (moved to far right) -->
+    <div style="flex-shrink: 0;">
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/b/bd/University_of_Engineering_and_Management_Kolkata_logo.png"
+        alt="UEM Logo"
+        class="logo-img"
+        style="height: 45px;"  
+      
+    </div>
+
+  </div>
+</header>
+
+
+  <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="container">
       <h2>Welcome to IIIHM Kolkata</h2>
-      <p>Premier Institute for Hospitality & Hotel Management Education<br>Affiliated to University of Engineering & Management (UEM), Kolkata</p>
+      <p>Premier Institute for Hospitality & Hotel Management Education<br>
+         Affiliated to University of Engineering & Management (UEM), Kolkata</p>
       <a href="#enquiry" class="btn">Apply Now</a>
       <a href="#courses" class="btn btn-outline">Explore Courses</a>
     </div>
   </section>
 
+
+  <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
     <div class="container">
       <h2 class="section-title">Why Choose IIIHM?</h2>
       <div class="grid">
+
         <div class="card">
-          <img src="https://i.ibb.co/Pv31HsX9/iem-ashram-building-1.png" alt="Industry Experience">
+          <img src="https://i.ibb.co/Pv31HsX9/iem-ashram-building-1.png" alt="IEM Building">
           <div class="card-content">
             <h3>36+ Years of Excellence</h3>
-            <p>Part of reputed IEM Group with strong academic legacy.</p>
+            <p>Part of the reputed IEM Group with a strong academic legacy across disciplines.</p>
           </div>
         </div>
+
         <div class="card">
           <img src="https://api.srimaniyainstitute.in/uploads/images/file-1768035155007-173224671.jpg" alt="Placements">
           <div class="card-content">
             <h3>Excellent Placements</h3>
-            <p>Strong industry connections with top hotel chains & cruise lines.</p>
+            <p>Strong industry connections with top hotel chains, cruise lines & airlines.</p>
           </div>
         </div>
+
         <div class="card">
           <img src="https://images.unsplash.com/photo-1522156373667-4c7234bbd804?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Labs">
           <div class="card-content">
             <h3>World-class Infrastructure</h3>
-            <p>Training kitchens, mock bar, front office, computer labs & more.</p>
+            <p>Training kitchens, mock bar, front office lab, computer labs & more.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
+
+  <!-- ===== COURSES ===== -->
   <section id="courses">
     <div class="container">
       <h2 class="section-title">Our Programs</h2>
       <div class="grid">
+
         <div class="card">
+          <!-- To use local file: src="iiihm-website/images/BHMCT.JPG" -->
           <img src="https://tlshs.com/blog/68568cd769233Top%20Hotel%20Management%20Courses%20After%2012th%20in%20India.webp" alt="BHMCT">
-		  <!--  Add this image in place of alt="BHMCT"   "images\BHMCT.JPG" -->
           <div class="card-content">
             <h3>Bachelor of Hotel Management & Catering Technology (BHMCT)</h3>
             <p>4-year honours degree with focus on hotel operations, catering & management.</p>
             <a href="#" class="btn" style="margin-top:15px; font-size:0.95rem;">Know More</a>
           </div>
         </div>
+
         <div class="card">
+          <!-- To use local file: src="iiihm-website/images/BHHA.JPG" -->
           <img src="https://tlshs.com/blog/6841986f4a557Bachelor%20of%20Hotel%20Management%20vs%20B.Sc.%20in%20Hospitality%20&%20Hotel%20Administration.webp" alt="BSc Hospitality">
-		  <!--  Add this image in place of alt="BSc Hospitality   "images\BHHA.JPG" -->
-          
-		  <div class="card-content">
+          <div class="card-content">
             <h3>B.Sc. in Hospitality & Hotel Administration (BHHA)</h3>
             <p>4-year programme with dual major options and strong industry exposure.</p>
             <a href="#" class="btn" style="margin-top:15px; font-size:0.95rem;">Know More</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
+
+  <!-- ===== INFRASTRUCTURE ===== -->
+  <section class="about" id="infrastructure">
+    <div class="container">
+      <h2 class="section-title">Our Infrastructure</h2>
+      <div class="infra-grid">
+
+        <div class="infra-item">
+          <div class="infra-icon">🍳</div>
+          <h4>Training Kitchen</h4>
+        </div>
+
+        <div class="infra-item">
+          <div class="infra-icon">🍹</div>
+          <h4>Mock Bar & Bartending Lab</h4>
+        </div>
+
+        <div class="infra-item">
+          <div class="infra-icon">🛎️</div>
+          <h4>Front Office Simulation</h4>
+        </div>
+
+        <div class="infra-item">
+          <div class="infra-icon">💻</div>
+          <h4>Computer Lab</h4>
+        </div>
+
+        <div class="infra-item">
+          <div class="infra-icon">📚</div>
+          <h4>Library & Reading Room</h4>
+        </div>
+        <!--  
+        <div class="infra-item">
+          <div class="infra-icon">🏋️</div>
+          <h4>Sports & Fitness</h4>
+        </div>
+         -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PLACEMENTS ===== -->
   <section style="background:#f0f0f0;" id="placements">
     <div class="container">
       <h2 class="section-title">Training & Placements</h2>
-	  
-	  
-	  <!--   **********  -->
-	  <!--   **********  -->
-	   
-    
-    <p style="text-align:center; max-width:900px; margin:0 auto 40px; font-size:1.2rem;">
-      Our students receive excellent training and are placed in top hospitality brands, hotel chains, cruise lines, and airlines.
-    </p>
 
-    <!-- Company Logos Carousel / Grid -->
-    <div class="logo-marquee-wrapper" style="overflow: hidden; margin: 0 auto; max-width: 100%;">
-      <div class="logo-marquee" style="
-        display: flex;
-        animation: scroll 25s linear infinite;
-        white-space: nowrap;
-      ">
-        <!-- Repeat logos for smooth infinite scroll -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoOXnAVfTGWJASt_sWiqVMF1oD9lura9AJsw&s" alt="Taj Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://www.addressguru.in/images/399814055.jpg" alt="The Oberoi Group" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Marriott" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="ITC Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Accor" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Hyatt" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Hilton" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="Radisson" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <!-- Duplicate set for seamless loop -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Taj_Hotels_logo.svg/512px-Taj_Hotels_logo.svg.png" alt="Taj Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="The Oberoi Group" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Marriott_International_logo.svg/512px-Marriott_International_logo.svg.png" alt="Marriott" style="height: 60px; margin: 0 30px; object-fit: contain;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png" alt="ITC Hotels" style="height: 60px; margin: 0 30px; object-fit: contain;">
+      <p style="text-align:center; max-width:900px; margin:0 auto 40px; font-size:1.15rem;">
+        Our students receive excellent training and are placed in top hospitality brands,
+        hotel chains, cruise lines, and airlines.
+      </p>
+
+      <!-- ✅ FIXED: All logos are now correct and distinct -->
+      <div class="logo-marquee-wrapper">
+        <div class="logo-marquee">
+
+          <!-- Set 1 -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Taj_Hotels_logo.svg/512px-Taj_Hotels_logo.svg.png"         alt="Taj Hotels">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png"        alt="ITC Hotels">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Marriott_International_logo.svg/512px-Marriott_International_logo.svg.png" alt="Marriott">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hyatt_Logo.svg/512px-Hyatt_Logo.svg.png"                   alt="Hyatt">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hilton_Hotels_%26_Resorts_logo.svg/512px-Hilton_Hotels_%26_Resorts_logo.svg.png" alt="Hilton">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Radisson_Hotels_logo.svg/512px-Radisson_Hotels_logo.svg.png" alt="Radisson">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Accor_logo.svg/512px-Accor_logo.svg.png"                   alt="Accor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/InterContinental_Hotels_Group_%28logo%29.svg/512px-InterContinental_Hotels_Group_%28logo%29.svg.png" alt="IHG">
+
+          <!-- Set 2 — identical copy for seamless infinite loop -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Taj_Hotels_logo.svg/512px-Taj_Hotels_logo.svg.png"         alt="Taj Hotels">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ITC_Hotels_logo.svg/1280px-ITC_Hotels_logo.svg.png"        alt="ITC Hotels">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Marriott_International_logo.svg/512px-Marriott_International_logo.svg.png" alt="Marriott">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hyatt_Logo.svg/512px-Hyatt_Logo.svg.png"                   alt="Hyatt">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hilton_Hotels_%26_Resorts_logo.svg/512px-Hilton_Hotels_%26_Resorts_logo.svg.png" alt="Hilton">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Radisson_Hotels_logo.svg/512px-Radisson_Hotels_logo.svg.png" alt="Radisson">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Accor_logo.svg/512px-Accor_logo.svg.png"                   alt="Accor">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/InterContinental_Hotels_Group_%28logo%29.svg/512px-InterContinental_Hotels_Group_%28logo%29.svg.png" alt="IHG">
+
+        </div>
       </div>
-    </div>
 
-    <!-- CSS for marquee animation -->
-    <style>
-      @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      .logo-marquee-wrapper:hover .logo-marquee {
-        animation-play-state: paused; /* Pause on hover */
-      }
-      @media (max-width: 768px) {
-        .logo-marquee {
-          animation-duration: 35s; /* Slower on mobile */
-        }
-      }
-    </style>
-
-	 
-	  <!--   **********  -->
-	  <!--   **********  -->
-	
-	  
-          <div style="text-align:center;">
+      <div style="text-align:center;">
         <a href="#" class="btn">View Placement Records</a>
       </div>
     </div>
   </section>
 
+
+  <!-- ===== ENQUIRY ===== -->
   <section class="enquiry" id="enquiry">
     <div class="container">
       <h2 class="section-title" style="color:white;">Enquire Now</h2>
       <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Mobile Number" required>
+        <input type="text"   placeholder="Full Name"     required>
+        <input type="email"  placeholder="Email Address" required>
+        <input type="tel"    placeholder="Mobile Number" required>
         <select required>
           <option value="">Select Course</option>
-          <option>BHMCT</option>
-          <option>BSc Hospitality & Hotel Administration</option>
+          <option>Bachelor of Hotel Management & Catering Technology (BHMCT)</option>
+          <option>BSc Hospitality & Hotel Administration (BHHA)</option>
         </select>
         <textarea placeholder="Your Message / Query" rows="4"></textarea>
         <button type="submit">Submit Enquiry</button>
@@ -398,48 +612,99 @@
     </div>
   </section>
 
+
+  <!-- ===== FOOTER ===== -->
   <footer id="contact">
     <div class="container">
       <div class="footer-grid">
+
         <div>
           <h4>IIIHM Kolkata</h4>
           <p>IEM's International Institute of Hotel Management<br>
-          Under University of Engineering & Management, Kolkata<br>
-          Salt Lake City, Kolkata, West Bengal<br>
-		  Plot No. J-1/1, Block EP & GP, Sector-V, Salt Lake, Kolkata – 700091</p>
+             Under University of Engineering & Management, Kolkata<br>
+             Plot No. J-1/1, Block EP & GP, Sector-V,<br>
+             Salt Lake, Kolkata – 700091</p>
         </div>
+
         <div>
           <h4>Quick Links</h4>
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Courses</a>
-          <a href="#">Admissions</a>
-          <a href="#">Placements</a>
-          <a href="#">Infrastructure</a>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#courses">Courses</a>
+          <a href="#infrastructure">Infrastructure</a>
+          <a href="#placements">Placements</a>
+          <a href="#enquiry">Admissions</a>
         </div>
+
         <div>
           <h4>Contact</h4>
-          <p>Phone: +91-9903200520<br>  +91-9990374209<br>
-		  Email: admissions@iiihm.in<br>
-          Website: www.iiihm.in</p>
+          <p>Phone: +91-98755 98082<br>
+             Email: admissions@iiihm.in<br>
+             Website: www.iiihm.in</p>
         </div>
+
         <div>
           <h4>Follow Us</h4>
-          <div class="social">
-		  
-		  
-		
-		    <!--   Add Facebook, Instagram, Linkedin logo here  -->
 
-            <a href="https://www.facebook.com/IEMInternationalInstituteofHotelManagement/">FB</a>
-            <a href="https://www.instagram.com/iiihm_uem/">IN</a>
-            <a href="https://www.linkedin.com/company/iem-s-international-institute-of-hotel-management/">LI</a>
-           
-          </div>
+          <!-- ✅ FIXED: Real SVG icons for Facebook, Instagram, LinkedIn -->
+          <div class="social">
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/IEMInternationalInstituteofHotelManagement/"
+               class="fb" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991
+                  3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506
+                  1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26
+                  c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988
+                  C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/iiihm_uem/"
+               class="ig" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148
+                  4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849
+                  0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919
+                  4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07
+                  -3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07
+                  -4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771
+                  4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0
+                  8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0
+                  8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78
+                  6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014
+                  4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073
+                  -1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354
+                  -2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162
+                  6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110
+                  -8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44
+                  0 000-2.881z"/>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/iem-s-international-institute-of-hotel-management/"
+               class="li" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852
+                  -3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h
+                  .046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455
+                  v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0
+                  112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771
+                  C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451
+                  C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+
+          </div><!-- /.social -->
         </div>
-      </div>
+
+      </div><!-- /.footer-grid -->
+
       <div class="copyright">
-        © 2026 IEM's International Institute of Hotel Management. All Rights Reserved.
+        &copy; 2026 IEM's International Institute of Hotel Management. All Rights Reserved.
       </div>
     </div>
   </footer>
